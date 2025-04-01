@@ -23,5 +23,5 @@ app.get('/proxy', async (req, res) => {
 });
 
 app.listen(3000, () => {
-  console.log('Proxy server running on http://localhost:3000');
+  console.log('Proxy server running on http://localhost:3000 ');
 });
