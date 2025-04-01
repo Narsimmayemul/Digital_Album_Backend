@@ -3,15 +3,12 @@ const cors = require('cors');
 const axios = require('axios');
 const env = require('dotenv').config();
 
-
-
-
 const app = express();
 app.use(cors());
 
 app.get('/proxy', async (req, res) => {
   const folderUrl = encodeURIComponent(req.query.folderUrl);  
-  // console.log(req.query.folderUrl);
+  console.log(req.query.folderUrl);
   try {
     const response = await axios.get(process.env.ScriptURL + `?folderUrl=${folderUrl}`);
     console.log(response.data);
